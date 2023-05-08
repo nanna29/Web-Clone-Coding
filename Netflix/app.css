@@ -4,21 +4,22 @@
     --black-color:#140a00;
     --blue-color:#045fd4;
     --red-color:#ff0000;
+    --netflix-color:#f8361c;
     --grey-dark-color:#909090;
     --grey-light-color:#e0e0e0;
 
     /*Size*/
-    --padding: 10px;
+    --padding-small:5px;
+    --padding-medium: 10px;
     --padding-large:20px;
-    --avatar-size:36px;
 
     /*Font Size*/
-    --font-large:25px;
-    --font-medium:14px;
-    --font-small:12px;
+    --font-large:21px;
+    --font-medium:15px;
+    --font-small:13px;
     --font-micro:10px;
 
-    --radius: 5px;
+    --radius: 3px;
 
 }
 
@@ -28,22 +29,25 @@
     box-sizing: border-box;
 }
 
+button {
+    border: none;
+}
 
 body{
-    background: linear-gradient(
-        to left,
+    background-image: linear-gradient(
+        -45deg ,
         rgba(20, 20, 20, 0) 5%,
         rgba(20, 20, 20, 0.25) 10%,
         rgba(20, 20, 20, 0.5) 50%,
         rgba(20, 20, 20, 0.75) 75%,
         rgba(20, 20, 20, 1) 100%
-      ), url(Images/main.jpg);
+      ), url(Image/main.jpg);
 }
 
 .logo{
-    color: #ff0000;
-    font-size: var(--font-large);
-    
+    color: var(--netflix-color);
+    font-size: 40px;
+    font-weight: bolder;
 }
 
 .header{ 
@@ -51,9 +55,17 @@ body{
     justify-content: space-between;
     padding: var(--padding-large);
 }
+
 .element{
     padding: 10%;
     color: white;
+    
+}
+.element > h1{
+    font-size: 50px;
+}
+.element > h3{
+    font-weight: normal;
 }
 
 .emailInput{
@@ -61,31 +73,50 @@ body{
     height: 52px;
     border-radius: 5px;
     background-color: black;
-    opacity: 0.5;
+    color: var(--white-color);
     font-size: var(--font-medium);
+    padding-left: var(--padding-small);
 }
+.emailInput2{
+    width: 400px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #132144;
+    color: var(--white-color);
+    font-size: var(--font-medium);
+    padding-left: var(--padding-small);
+    border-color: green;
+}
+.email > h3{
+    color: white;
+    font-weight: normal;
+}
+
+
 .startBtn {
-    background-color: red;
+    background-color: var(--netflix-color);
     color: white;
     font-size: var(--font-large);
-    padding: var(--padding);
+    padding: var(--padding-medium);
     padding-left: 20px;
     padding-right: 20px;
     border-radius: var(--radius);
     margin-top: 10px;
+    height: 52px;
 }
+
 .logIn{
-    background-color: red;
+    background-color:var(--netflix-color);
     color: white;
-    font-size: var(--font-medium);
+    font-size: 15px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: var(--radius);
 }
 .language{
-    
-    border-radius: 2px;
+    font-size: 15px;
+    border-radius: 3px;
     background-color: black;
     padding-left: 5px;
     padding-right: 5px;
@@ -98,55 +129,113 @@ body{
 }
 
 .howto{
-    margin: 3%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border-radius: var(--radius);
-    background: 
-    linear-gradient(
-        to right bottom,
-     #960c24, #800c28,#6b0d2c,
-    #100e3e,#210e3b,#010c3f,
-    #2b0e39,#160f3e,#160f3e);
-    padding:5%;
-    color: white;
-    
+    padding: 3%;
+    padding-bottom: 0px;
 }
-.enjoyOn,.watchEverywhere,.kids,.download{ 
-    width: 350px;
-    height:auto;
+
+table{
+    border-spacing:15px ;
 }
 
 .howto1,.howto2,.howto3,.howto4{
+    padding: 3%;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    background: 
+    linear-gradient(
+    to left top,
+    #960c24, #800c28,#6b0d2c,
+    #100e3e,#210e3b,#010c3f,
+    #160f3e,#160f3e);
+    color: white;
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+}
+
+.enjoyOn,.watchEverywhere,.kids,.download{
+    width: 70%;
+    height:auto;
+    margin: 0 auto;
     display: flex;
-    margin: 3%;
 }
 
 .QNA,.email,.link,.etc{
     background: #00081d;
 }
 
+.QNA,.email,.link,.etc{
+    color: white;
+    padding: 10%;
+}
+ul{
+    list-style:none;
+}
 .QNA{
-    padding: 20%;
-    
+    padding-top: 5%;
+    padding-bottom: 15px;
 }
 .QNA>h1{
     font-size: 40px;
     padding-bottom: 5px;
-    color: white;
 }
-.QNA>button{
-    font-size: 25px;
-    padding: var(--padding-large);
+
+.Q>li>button{
+    color: white;
+    font-size: 20px;
+    padding: 20px 50px 20px 10px;
+    width: 100%;
     margin-top: 10px;
     background-color: #132144;
-    color: white;
     border: none;
-    width:1000px;
     text-align: start;
+
 }
-.QNA>button:hover{
+
+.Q>li>button>i{
+    color: var(--red-color);
+    align-self: end;
+}
+
+.Q>li>button:hover{
     background-color: #213261;
     transition: 0.5s;
+}
 
+.email{
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+.etc{
+    padding-top: 0px;
+}
+.link{
+    padding-bottom: 30px;
+}
+
+.link>p,a{
+    font-size: var(--font-medium);
+    color: rgb(167, 166, 166);
+    padding-bottom:50px;
+}
+
+.etc{
+    font-size: var(--font-small);
+    color: rgb(167, 166, 166);
+    padding-bottom:50px;
+}
+
+.etc > p{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.table{
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 150px;
 }
