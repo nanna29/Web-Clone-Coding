@@ -1,0 +1,152 @@
+:root{
+    /*Color*/
+    --white-color:#fff;
+    --black-color:#140a00;
+    --blue-color:#045fd4;
+    --red-color:#ff0000;
+    --grey-dark-color:#909090;
+    --grey-light-color:#e0e0e0;
+
+    /*Size*/
+    --padding: 10px;
+    --padding-large:20px;
+    --avatar-size:36px;
+
+    /*Font Size*/
+    --font-large:25px;
+    --font-medium:14px;
+    --font-small:12px;
+    --font-micro:10px;
+
+    --radius: 5px;
+
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: linear-gradient(
+        to left,
+        rgba(20, 20, 20, 0) 5%,
+        rgba(20, 20, 20, 0.25) 10%,
+        rgba(20, 20, 20, 0.5) 50%,
+        rgba(20, 20, 20, 0.75) 75%,
+        rgba(20, 20, 20, 1) 100%
+      ), url(Images/main.jpg);
+}
+
+.logo{
+    color: #ff0000;
+    font-size: var(--font-large);
+    
+}
+
+.header{ 
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding-large);
+}
+.element{
+    padding: 10%;
+    color: white;
+}
+
+.emailInput{
+    width: 400px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: black;
+    opacity: 0.5;
+    font-size: var(--font-medium);
+}
+.startBtn {
+    background-color: red;
+    color: white;
+    font-size: var(--font-large);
+    padding: var(--padding);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: var(--radius);
+    margin-top: 10px;
+}
+.logIn{
+    background-color: red;
+    color: white;
+    font-size: var(--font-medium);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--radius);
+}
+.language{
+    
+    border-radius: 2px;
+    background-color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding: 5px;
+    color: var(--white-color);
+}
+
+.fa-solid{
+    color:white;
+}
+
+.howto{
+    margin: 3%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: var(--radius);
+    background: 
+    linear-gradient(
+        to right bottom,
+     #960c24, #800c28,#6b0d2c,
+    #100e3e,#210e3b,#010c3f,
+    #2b0e39,#160f3e,#160f3e);
+    padding:5%;
+    color: white;
+    
+}
+.enjoyOn,.watchEverywhere,.kids,.download{ 
+    width: 350px;
+    height:auto;
+}
+
+.howto1,.howto2,.howto3,.howto4{
+    display: flex;
+    margin: 3%;
+}
+
+.QNA,.email,.link,.etc{
+    background: #00081d;
+}
+
+.QNA{
+    padding: 20%;
+    
+}
+.QNA>h1{
+    font-size: 40px;
+    padding-bottom: 5px;
+    color: white;
+}
+.QNA>button{
+    font-size: 25px;
+    padding: var(--padding-large);
+    margin-top: 10px;
+    background-color: #132144;
+    color: white;
+    border: none;
+    width:1000px;
+    text-align: start;
+}
+.QNA>button:hover{
+    background-color: #213261;
+    transition: 0.5s;
+
+}
